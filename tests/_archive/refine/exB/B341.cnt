@@ -1,0 +1,29 @@
+!!
+!! Control File for FSTR solver
+!!
+!VERSION
+    3
+!SOLUTION, TYPE = NLSTATIC
+!STATIC
+!BOUNDARY
+    FIX,  1,  3, 0.0
+!DLOAD
+# B340P3, P3,    -1.0
+ B340P, S,   1.0
+!WRITE,RESULT
+!NODE_OUTPUT
+   STRAIN
+   STRESS
+   REACT
+!!
+!! SOLVER CONTROL
+!!
+!SOLVER,METHOD=1,PRECOND=1,ITERLOG=YES,TIMELOG=YES,
+  10000,   1, 10, 10
+ 1.0e-8, 1.0, 0.0
+!WRITE,VISUAL
+!VISUAL,metod=PSR
+!surface_num=1
+!surface 1
+!output_type=VTK
+!END

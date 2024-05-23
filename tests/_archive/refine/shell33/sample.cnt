@@ -1,0 +1,17 @@
+!!
+!! Control File for FSTR solver
+!!
+!BOUNDARY
+  FIX, 1, 3,     0.0
+!DLOAD
+  TOP, S, 1.0
+!!
+!! SOLVER CONTROL
+!!
+!SOLVER,METHOD=DIRECT
+!WRITE,VISUAL
+!VISUAL,metod=PSR
+!surface_num=1
+!surface 1
+!output_type=VTK
+!END
