@@ -67,7 +67,7 @@ contains
     real(kind=kreal), intent(inout) :: coords(3,3)            !< variables to define material coordinate system
     real(kind=kreal), intent(in)    :: time                   !< current time
     real(kind=kreal), intent(in)    :: tincr                  !< time increment
-    real(kind=kreal), intent(in)    :: temperature(nn) !< temperature
+    real(kind=kreal), intent(in), optional    :: temperature(nn) !< temperature
     real(kind=kreal), intent(in), optional :: u(:,:)          !< nodal displacemwent
 
     !---------------------------------------------------------------------
@@ -593,9 +593,9 @@ contains
     real(kind=kreal), intent(in)            :: coordsys(3,3)
     real(kind=kreal), intent(in)            :: time
     real(kind=kreal), intent(in)            :: tincr
-    real(kind=kreal), intent(in)            :: ttc
-    real(kind=kreal), intent(in)            :: tt0
-    real(kind=kreal), intent(in)            :: ttn
+    real(kind=kreal), intent(in), optional  :: ttc
+    real(kind=kreal), intent(in), optional  :: tt0
+    real(kind=kreal), intent(in), optional  :: ttn
     integer(kind=kint), intent(in), optional :: hdflag  !> return only hyd and dev term if specified
 
     integer(kind=kint) :: mtype, i, j, k

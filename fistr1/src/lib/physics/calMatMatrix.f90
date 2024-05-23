@@ -35,7 +35,7 @@ contains
     real(kind=kreal), intent(in)     :: time           !> current time
     real(kind=kreal), intent(in)     :: dtime          !> time increment
     real(kind=kreal), intent(in)     :: cdsys(3,3)     !> material coordinate system
-    real(kind=kreal), intent(in)     :: temperature   !> temperature
+    real(kind=kreal), intent(in), optional     :: temperature   !> temperature
     integer(kind=kint), intent(in), optional :: isEp
     integer(kind=kint), intent(in), optional :: hdflag  !> return only hyd and dev term if specified
 

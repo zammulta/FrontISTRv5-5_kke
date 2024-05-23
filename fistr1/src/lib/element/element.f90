@@ -81,6 +81,8 @@ module elementInfo
   integer, parameter :: fe_hex8n    = 361
   integer, parameter :: fe_hex20n   = 362
   integer, parameter :: fe_hex27n   = 363
+  integer, parameter :: fe_joint3n  = 531
+  integer, parameter :: fe_joint4n  = 541
 
   integer, parameter :: fe_beam2n   = 611
   integer, parameter :: fe_beam3n   = 612

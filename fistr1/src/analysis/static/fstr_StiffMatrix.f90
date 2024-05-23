@@ -52,12 +52,6 @@ contains
       if (hecmw_is_etype_patch(ic_type)) cycle
       ! ----- Set number of nodes
 
-      ! ----- element loop
-      !$omp parallel default(none), &
-        !$omp&  private(icel,iiS,nn,j,nodLOCAL,i,ecoord,du,u,u_prev,tt,cdsys_ID,coords, &
-        !$omp&          material,thick,stiffness,isect,ihead), &
-        !$omp&  shared(iS,iE,hecMESH,ndof,fstrSOLID,ic_type,hecMAT,time,tincr)
-      !$omp do
       do icel= is, iE
 
         ! ----- nodal coordinate & displacement
@@ -186,8 +180,7 @@ contains
         call hecmw_mat_ass_elem(hecMAT, nn, nodLOCAL, stiffness)
 
       enddo      ! icel
-      !$omp end do
-      !$omp end parallel
+
     enddo        ! itype
 
   end subroutine fstr_StiffMatrix
