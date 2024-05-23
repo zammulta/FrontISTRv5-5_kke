@@ -6,6 +6,7 @@
 module m_static_LIB_1d
   use hecmw, only : kint, kreal
   use elementInfo
+  use m_concrete
   implicit none
 
 contains
